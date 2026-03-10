@@ -6,8 +6,8 @@ class SpeciesRepository:
         self.session = session
     
     def get_all(self):
-	    statement = select(Species)
-	    items = self.session.exec(statement).all()
+        statement = select(Species)
+        items = self.session.exec(statement).all()
         return items
 
     def insert(self, payload: SpeciesCreate):
